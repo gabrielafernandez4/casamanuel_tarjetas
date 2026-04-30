@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi cuenta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>A Casa de Manuel</h1>
+    <h2>Mi cuenta</h2>
+
+    <div class="card">
+        <p><strong>Nombre:</strong> {{ nombre }}</p>
+        <p><strong>Saldo:</strong> {{ "%.2f"|format(saldo) }} €</p>
+    </div>
+
+    <h3>Historial</h3>
+
+    {% for h in historial %}
+    <div class="card">
+        <p>{{ h[0] }}</p>
+        <p>Total: {{ h[1] }} €</p>
+        <p>Usado: {{ h[2] }} €</p>
+        <p>Pagado: {{ h[3] }} €</p>
+        <p>Bonus: {{ h[4] }} €</p>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
