@@ -8,7 +8,7 @@ def conectar():
     return sqlite3.connect("clientes.db")
 
 #PANEL ADMIN
-@app.route("/", methods=["GET", "POST"])
+@app.route("/fran.panel.admintarjetas", methods=["GET", "POST"])
 def admin():
 
     saldo = None
