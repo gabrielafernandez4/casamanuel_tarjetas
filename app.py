@@ -147,6 +147,7 @@ def cliente(id_cliente):
 
     return render_template("cliente.html",
                            nombre=cliente[0],
+                           id_cliente=id_cliente,
                            saldo=cliente[1],
                            historial=historial)
 
